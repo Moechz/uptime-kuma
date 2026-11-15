@@ -1,0 +1,113 @@
+{
+  "app_id": "uptimekumadocker",
+  "title": "Uptime Kuma",
+  "image": "louislam/uptime-kuma:1.23.16",
+  "repo_name": "uptime-kuma",
+  "mode": "wrapper",
+  "container_port": 3001,
+  "category": [
+    "Utilities"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/uptimekumadocker/data",
+      "container": "/app/data"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "louislam",
+  "upstream_url": "https://github.com/louislam/uptime-kuma",
+  "upstream_license": "MIT",
+  "descript": "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder.",
+  "release_note": "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/usr/bin/dumb-init",
+      "--",
+      "extra/entrypoint.sh"
+    ],
+    "cmd": [
+      "node",
+      "server/server.js"
+    ],
+    "exposed_ports": [
+      3001
+    ],
+    "declared_volumes": [
+      "/app/data"
+    ],
+    "image_healthcheck": [
+      "CMD-SHELL",
+      "extra/healthcheck"
+    ],
+    "digest": "louislam/uptime-kuma@sha256:431fee3be822b04861cf0e35daf4beef6b7cb37391c5f26c3ad6e12ce280fe18",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "curl",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [
+        "/app",
+        "/app/data"
+      ],
+      "host_port": 18000,
+      "log_tail": "==> Performing startup jobs and maintenance tasks\nchown: changing ownership of '/app/data': Operation not permitted",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {}
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "curl -s -o /dev/null http://127.0.0.1:3001/ || exit 1"
+  ],
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "uptimekumadocker",
+  "github_repo": "uptime-kuma",
+  "upstream_version": "1.23.16",
+  "release_tag_prefix": "v",
+  "version": "1.23.16-1",
+  "help": "https://github.com/Moechz/uptimekuma/issues",
+  "official": "https://github.com/louislam/uptime-kuma",
+  "license": "MIT",
+  "docker_socket": false,
+  "group_add": [],
+  "host_port": 8144,
+  "healthcheck_start_period": "60s",
+  "wrapper_note": "the image entrypoint tries to chown its data folder, which fails in a non-root\ncontainer. This wrapper skips that step and starts the Node server directly; the\napplication still runs its own database migrations on start.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: the upstream entrypoint chowns `/app/data`; the wrapper starts `node server/server.js` directly as uid 1000 and lets the app initialise its database.",
+  "translations": {
+    "zh-cn": {
+      "descript": "Uptime Kuma 是自建的监控告警工具：监控 HTTP(s) 服务、TCP 端口、ping、DNS、关键字，甚至 Docker 容器；出问题时通过 Telegram、ntfy、邮件、webhook 等 90 多种渠道通知，还能发布公开状态页。历史与配置都保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面先创建管理员账号，然后添加监控项，按需配置通知渠道。SQLite 数据库保存在 DockerAppData/uptimekumadocker/data。界面为纯 HTTP，发布状态页或把管理界面暴露到公网前请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Uptime Kuma 1.23.16，以非 root 容器运行。网站/服务监控，带状态页与 90+ 通知渠道；数据库保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Uptime Kuma 是自建的監控告警工具：監控 HTTP(s) 服務、TCP 端口、ping、DNS、關鍵字，甚至 Docker 容器；出問題時透過 Telegram、ntfy、郵件、webhook 等 90 多種渠道通知，還能發佈公開狀態頁。歷史與設定都保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面先建立管理員帳號，然後新增監控項，按需設定通知渠道。SQLite 資料庫保存在 DockerAppData/uptimekumadocker/data。介面為純 HTTP，發佈狀態頁或把管理介面公開到互聯網前請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Uptime Kuma 1.23.16，以非 root 容器運行。網站/服務監控，帶狀態頁與 90+ 通知渠道；資料庫保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/app/data` (mounted from `DockerAppData/uptimekumadocker/data`) holds `kuma.db` (SQLite), uploaded icons and the Docker TLS certificates.",
+  "design_notes": [
+    "**Direct node start.** The upstream entrypoint chowns the data directory; the wrapper skips that and runs `node server/server.js`, which still performs the database migrations.",
+    "**SQLite only.** No database server needed; monitoring history grows in the data folder."
+  ],
+  "limitations": [
+    "- Monitoring runs from the NAS, so a NAS outage also stops the monitors.",
+    "- The admin UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+    "- History grows over time; prune it in the UI or keep an eye on the data folder size."
+  ]
+}

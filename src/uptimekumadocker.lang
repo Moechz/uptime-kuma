@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "uptimekumadocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[zh-cn]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma 是自建的监控告警工具：监控 HTTP(s) 服务、TCP 端口、ping、DNS、关键字，甚至 Docker 容器；出问题时通过 Telegram、ntfy、邮件、webhook 等 90 多种渠道通知，还能发布公开状态页。历史与配置都保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Uptime Kuma 1.23.16，以非 root 容器运行。网站/服务监控，带状态页与 90+ 通知渠道；数据库保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。打开界面先创建管理员账号，然后添加监控项，按需配置通知渠道。SQLite 数据库保存在 DockerAppData/uptimekumadocker/data。界面为纯 HTTP，发布状态页或把管理界面暴露到公网前请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma 是自建的監控告警工具：監控 HTTP(s) 服務、TCP 端口、ping、DNS、關鍵字，甚至 Docker 容器；出問題時透過 Telegram、ntfy、郵件、webhook 等 90 多種渠道通知，還能發佈公開狀態頁。歷史與設定都保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Uptime Kuma 1.23.16，以非 root 容器運行。網站/服務監控，帶狀態頁與 90+ 通知渠道；資料庫保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。開啟介面先建立管理員帳號，然後新增監控項，按需設定通知渠道。SQLite 資料庫保存在 DockerAppData/uptimekumadocker/data。介面為純 HTTP，發佈狀態頁或把管理介面公開到互聯網前請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[de-de]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[it-it]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[es-es]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[hu-hu]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[ja-jp]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[ko-kr]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[pl-pl]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[ru-ru]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[tr-tr]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[pt-pt]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[ar-sa]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[cs-cz]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[he-il]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[id-id]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[nb-no]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[nl-nl]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[sv-se]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[th-th]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
+[vi-vn]
+name         = "Uptime Kuma"
+auth         = "louislam"
+version      = "@@VERSION@@"
+descript     = "Uptime Kuma is a self-hosted monitoring tool: watch HTTP(s) services, TCP ports, ping, DNS, keyword checks and Docker containers, get notified through 90+ channels (Telegram, ntfy, email, webhooks) when something goes down, and publish a public status page. History and configuration stay in the application data folder."
+release_note = "1. First release: Uptime Kuma 1.23.16 from Docker Hub as a non-root container. Uptime monitoring with status pages and 90+ notification channels; database in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Open the UI and create the admin account on first run, then add monitors and optionally notifications. The SQLite database lives in DockerAppData/uptimekumadocker/data. Plain HTTP; use a TLS reverse proxy before publishing the status page or exposing the admin UI to the internet."
+
