@@ -25,6 +25,32 @@ Uptime Kuma on TOS 7 through the App Center:
 
 `/app/data` (mounted from `DockerAppData/uptimekumadocker/data`) holds `kuma.db` (SQLite), uploaded icons and the Docker TLS certificates.
 
+## Third-party services (API disclosure)
+
+The developer operates no server in this path. The application contacts only the services
+**you configure**, plus (optionally) an update check and the image registry.
+
+| Service | Endpoint | Data sent | Destination / region |
+|---|---|---|---|
+| Services you configure in the app | the address you enter | only the data that feature needs | normally your own LAN or the provider you chose |
+| Update check (if enabled) | the upstream project's release feed | current version string | GitHub, US |
+| Image pull | `registry-1.docker.io` or your registry mirror | anonymous pull | Docker Hub, US / your mirror |
+
+See `PRIVACY.md` §6 for the full table. Disable any integration in the app's settings if you
+do not want it.
+
+## Licence and attributions
+
+| Component | Licence | Notes |
+|---|---|---|
+| Uptime Kuma | MIT | upstream application, used unmodified inside the image |
+| Container image `louislam/uptime-kuma:1.23.16` | see the image's own metadata | pulled from Docker Hub at install time |
+| This packaging | GPL-3.0 (see `LICENSE`) | compose file, metadata, translations, icon |
+
+“Uptime Kuma”, “TerraMaster” and “TOS” are trademarks of their respective owners. This is an
+independent community package by Moechz and is not affiliated with the upstream project or
+TerraMaster. Full details: [NOTICE.md](NOTICE.md).
+
 ## Design highlights
 
 - **Non-root.** `user: "1000:1000"`; verified on real hardware (the container reports uid 1000).
@@ -91,9 +117,6 @@ bash test/install-and-verify.sh                  # on-device E2E (needs root)
    repository URL, architecture `x86_64`.
 4. Version Management → Add Version `1.23.16-1` → automated validation → review.
 
-## License / branding
-
-Uptime Kuma is distributed by its upstream authors under **MIT**. The container image is the official image from Docker Hub (`louislam/uptime-kuma:1.23.16`) and is used unmodified; no upstream source code is redistributed here. This packaging is an independent community submission by Moechz and is not affiliated with the upstream project or TerraMaster.
 
 ## Limitations
 
@@ -104,3 +127,9 @@ Uptime Kuma is distributed by its upstream authors under **MIT**. The container 
 ---
 
 Packaged for TOS 7 by Moechz. Upstream image used unmodified from Docker Hub.
+
+## Support
+
+- Issues and questions: <https://github.com/Moechz/uptimekuma/issues>
+- Email: moechz@163.com
+- Privacy: [PRIVACY.md](PRIVACY.md) · Licence: [NOTICE.md](NOTICE.md)
